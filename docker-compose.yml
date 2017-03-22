@@ -1,7 +1,7 @@
 version: '2.1'
 services:
     postgis:
-        build: .
+        build: ./PostGIS
         environment:
             - POSTGRES_PASSWORD=yourpasswordhere
         image: docker.io/znmeb/postgis:build
