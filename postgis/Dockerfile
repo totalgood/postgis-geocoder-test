@@ -13,7 +13,7 @@ RUN apt-get update \
 # Grab geocoder dump file
 RUN mkdir -p /gisdata
 WORKDIR /gisdata
-RUN wget https://github.com/hackoregon/postgis-geocoder-test/releases/download/testing/geocoder.pgdump
+RUN wget -q https://github.com/hackoregon/postgis-geocoder-test/releases/download/testing/geocoder.pgdump
 
 # set up entry point to restore the geocoder
 RUN mkdir -p /docker-entrypoint-initdb.d
