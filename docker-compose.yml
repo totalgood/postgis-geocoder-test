@@ -1,9 +1,12 @@
 version: '2.1'
 services:
     postgis:
-        build: ./PostGIS
+        build: ./postgis
         environment:
             - POSTGRES_PASSWORD=yourpasswordhere
         image: docker.io/znmeb/postgis:build
         ports: 
         - '5439:5432'
+    django:
+        build: ./django
+        image: docker.io/znmeb/django:build
