@@ -54,3 +54,8 @@ RUN apt-get install -qqy --no-install-recommends \
   python-dev \
   python3-dev \
   && apt-get clean
+
+# Transportation scripts
+RUN mkdir -p /gisdata/transportation-scripts
+COPY transportation-scripts/* /gisdata/transportation-scripts/
+RUN chmod +x /gisdata/transportation-scripts/*bash
