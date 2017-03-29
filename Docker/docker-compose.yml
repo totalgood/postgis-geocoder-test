@@ -1,9 +1,9 @@
 version: '2.1'
 services:
-    postgis:
+    hackob:
         build: .
         environment:
             - POSTGRES_PASSWORD=yourpasswordhere
-        image: docker.io/znmeb/postgis:build
+        image: docker.io/znmeb/hackob
         ports: 
         - '5439:5432'

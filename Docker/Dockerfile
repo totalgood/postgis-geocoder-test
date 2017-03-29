@@ -8,7 +8,11 @@ RUN apt-get update \
   postgresql-9.6-postgis-2.3 \
   postgresql-9.6-postgis-2.3-scripts \
   wget \
+  vim-nox \
   && apt-get clean
+
+RUN pip install --upgrade pip \
+  && pip install virtualenvwrapper
 
 # Grab geocoder dump file
 RUN mkdir -p /gisdata
