@@ -7,3 +7,4 @@ services:
         image: docker.io/znmeb/hackob
         ports: 
         - '5439:5432'
+        - '8000:8000'
