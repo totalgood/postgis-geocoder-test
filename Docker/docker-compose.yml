@@ -4,10 +4,10 @@ services:
         environment:
             - POSTGRES_PASSWORD=yourpasswordhere
             - TERM
-            - HOST_HOME_HACKOB
+            - HOST_PROJECT_HOME
         image: docker.io/znmeb/hackob
         ports: 
         - '5439:5432'
         - '8000:8000'
         volumes:
-            - $HOST_HOME_HACKOB:/home/hackob
+            - $HOST_PROJECT_HOME:/home/hackob/Projects
