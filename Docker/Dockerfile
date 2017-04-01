@@ -21,7 +21,7 @@ RUN apt-get update \
 
 # Download geocoder dump file
 RUN mkdir -p /gisdata \
-  && cd /gisdata /
+  && cd /gisdata \
   && wget -q https://github.com/hackoregon/postgis-geocoder-test/releases/download/testing/geocoder.pgdump
 
 # Set up entry point to restore the geocoder database
