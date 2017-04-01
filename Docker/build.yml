@@ -12,3 +12,4 @@ services:
         - '8000:8000'
         volumes:
             - $HOST_PROJECT_HOME:/home/hackob/Projects
+        privileged: true
