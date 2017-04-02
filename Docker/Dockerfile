@@ -36,6 +36,7 @@ ENV HACKOB_HOME=/home/hackob \
   VIRTUALENVWRAPPER_SCRIPT=/usr/share/virtualenvwrappper/virtualenvwrapper.sh
 RUN useradd -c "Hack Oregon Generic Backend User" -u 1000 -s /bin/bash -m hackob \
   && echo "source $VIRTUALENVWRAPPER_SCRIPT >> ~/.bashrc" \
-  && mkdir -p $PROJECT_HOME \
-  && chown -R hackob:hackob $HACKOB_HOME
-VOLUME $PROJECT_HOME
+  && mkdir -p $PROJECT_HOME
+  # && chown -R hackob:hackob $HACKOB_HOME
+VOLUME /home/hackob/Projects
+SHELL [ "/bin/bash", "-c" ]

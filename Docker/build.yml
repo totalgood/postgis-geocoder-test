@@ -1,15 +1,17 @@
 version: '2.1'
 services:
-    hackob:
-        build: .
-        environment:
-            - POSTGRES_PASSWORD=yourpasswordhere
-            - TERM
-            - HOST_PROJECT_HOME
-        image: docker.io/znmeb/hackob
-        ports: 
-        - '5439:5432'
-        - '8000:8000'
-        volumes:
-            - $HOST_PROJECT_HOME:/home/hackob/Projects
-        privileged: true
+  hackob:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - POSTGRES_PASSWORD=yourpasswordhere
+      - TERM
+      - HOST_PROJECT_HOME
+    image: docker.io/znmeb/hackob
+    ports: 
+      - '5439:5432'
+      - '8000:8000'
+    volumes:
+      - $HOST_PROJECT_HOME:/home/hackob/Projects:rw
+    privileged: true
